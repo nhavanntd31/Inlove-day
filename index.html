@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>Days since a Hear Me Code member landed a job in tech</title>
+
+    <meta name="description" content="How many days has it been since a Hear Me Code member landed a job in tech?">
+
+    <!-- Opengraph -->
+    
+
+    <!-- Twitter card -->
+   
+
+    <link rel="shortcut icon" href="icons8-heart-30.png">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        
+        }
+        .main
+        {
+            width: 80%;
+            color: #fff;
+            padding: 10%;
+            font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+            background-color: #00A99D;
+            text-align: center;
+            background: url("background.jpg");
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
+            opacity: 0.9;
+            font-size: 2.25em;
+        }
+
+        #days-container {
+            font-size: 4.5em;
+        }
+
+    </style>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-49936574-2', 'hearmecode.com');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <div class="main">
+
+        <div style="opacity: 1;">
+            It has been 
+        </div >
+
+        <div style="opacity: 1;" id="days-container">
+            
+        </div >
+
+        <div style="opacity: 1;">
+            days since we love.
+        </div>
+
+        <div style="margin-top: 1em; opacity: 1;" >
+            Hope it takes longer and longer.
+
+        </div>
+        
+        <div style="margin-top: 5px; opacity: 1;font: size 2.5em;">
+        
+        Love!!
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+            var jobAnnounced = new Date(2022,9,1); // 0 is January for some ungodly reason
+            var today = new Date();
+            // var diffDays = Math.round(Math.abs((jobAnnounced.getTime() - today.getTime())/(oneDay))) - 1;
+
+            jobAnnounced = moment(jobAnnounced);
+            today = moment(today);
+            diffDays = today.diff(jobAnnounced, 'days');
+
+            $("#days-container").text(diffDays);
+
+        });
+    </script>
+
+</body>
+</html>
